@@ -91,7 +91,7 @@ const onchangeHandler = (ev) => {
 	}
 	
 }
-document.addEventListener('change', onchangeHandler, false);
+document.getElementById('form').addEventListener('change', onchangeHandler);
 
 
 //Document listen to click event for submit button
@@ -100,8 +100,8 @@ const onclickHandler = (ev) => {
 	if(ev.target.classList.contains('form-submit')){
 		
 		//Remove the event handler from the document
-		document.removeEventListener('change', onchangeHandler);
-		document.removeEventListener('click', onclickHandler);
+		document.getElementById('form').removeEventListener('change', onchangeHandler);
+		document.getElementById('form').removeEventListener('click', onclickHandler);
 		
 		//Remove app and display thank you page
 		document.getElementById('app').remove();
@@ -111,6 +111,6 @@ const onclickHandler = (ev) => {
 	}
 
 }
-document.addEventListener('click', onclickHandler, false);
+document.getElementById('form').addEventListener('click', onclickHandler);
 
 
