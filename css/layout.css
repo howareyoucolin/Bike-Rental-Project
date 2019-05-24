@@ -1,0 +1,78 @@
+/*** page layout ***/
+body{
+	background:#F2F2F2;
+}
+header{
+	background:#373737;
+	color:#FFF;
+	line-height:80px;
+	font-size:24px;
+	text-align:center;
+}
+main{
+	margin:15px;
+}
+@media only screen and (min-width: 600px) {
+	main{
+		min-height:60vh;
+		margin:80px auto;
+		max-width:768px;
+	}
+}
+footer{
+	margin:0 auto;
+	max-width:780px;
+	border-top:1px solid #373737;
+	text-align:center;
+	line-height:50px;
+}
+#app{
+	display:none;
+}
+#thank-you h1{
+	border-bottom:1px solid #373737;
+	font-size:18px;
+	color:green;
+	padding:25px 0;
+	margin:15px 0;
+}
+/*** loading css ***/
+main .loading{
+	margin:50px auto;
+	text-align:center;
+	display: block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+}
+main .loading div {
+	display: inline-block;
+	position: absolute;
+	left: 6px;
+	width: 13px;
+	background: #373737;
+	animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+main .loading div:nth-child(1) {
+	left: 6px;
+	animation-delay: -0.24s;
+}
+main .loading div:nth-child(2) {
+	left: 26px;
+	animation-delay: -0.12s;
+}
+main .loading div:nth-child(3) {
+	left: 45px;
+	animation-delay: 0;
+}
+@keyframes lds-facebook {
+	0% {
+		top: 6px;
+		height: 51px;
+	}
+	50%, 100% {
+		top: 19px;
+		height: 26px;
+	}
+}
+
